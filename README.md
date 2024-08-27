@@ -1,1 +1,1 @@
-# Desenvolvimento-Web
+Este repertório contém as atividades realizadas nos laboratórios da matéria desenvolvimento web.

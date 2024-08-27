@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(235, 208, 173);font-family: Arial, sans-serif;
+    line-height: 4;
+    background-color: rgb(252, 243, 195);
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+h1{
+    text-align: center;
+    background-color: gray;
+}
+p{
+    text-align: center;
+    color: blue;
+}
+.img,.link{
+    text-align: center;
+}
+.img img{
+    border-radius: 100%;
+}
+.link a{
+    text-decoration: none;
+    background-color: gray;
+    color: red;
+    border-radius: 5px;
+}
