@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+h1{
+    font-size: 4rem;
+    line-height: 1.4;
+    text-align: center;
+}
+.btn{
+    color: white;
+    background-color: #357226;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    width: 100px;
+    cursor:pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+.btn:hover{
+    background-color: #a8dd9b;
+}
+.tela{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-in-out;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tela.up{
+    margin-top: -100vh;
+}
+
+@media (max-width:768px){
+    h1{
+        font-size: 2rem;
+    }
+    .btn{
+        font-size: 1rem;
+    }
+}

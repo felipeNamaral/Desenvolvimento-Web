@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <div class="tela">
+        <h1>Quiz Franca basquete</h1>
+        <button class="btn iniciar" id="iniciar">Iniciar</button>
+    </div>
+    <div class="tela">
+        <h1>primeira Pergunta</h1>
+        <h3>Em que ano foi fundado o Sesi Franca Basquete?</h3>
+        <br><br>
+        <label>
+            <input type="radio" name="quetao0" value="0"> 1930
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao0" value="1"> 1940
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao0" value="2"> 1950
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao0" value="3"> 1960
+        </label>
+        <br><br><br>
+        <button class="btn proximo" id="proximo1">proxima</button>
+    </div>
+
+    <div class="tela">
+        <h1>Segunda pergunta</h1>
+        <h3>Qual é o nome do ginásio onde o Sesi Franca Basquete manda seus jogos?</h3>
+        <br><br>
+        <label>
+            <input type="radio" name="quetao1" value="0"> Ginásio do Ibirapuera
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao1" value="1"> Ginásio do Morumbi
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao1" value="2"> Ginásio Antônio Prado Júnior
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao1" value="3"> Ginásio Paulo Machadão
+        </label>
+        <br><br><br>
+        <button class="btn proximo" id="proximo2">proxima</button>
+    </div>
+
+    <div class="tela">
+        <h1>Terceira Pergunta</h1>
+        <h3>Qual título importante o Sesi Franca Basquete conquistou em 2019?</h3>
+
+        <br><br>
+        <label>
+            <input type="radio" name="quetao2" value="0"> Copa do Brasil
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao2" value="1"> Campeonato Paulista
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao2" value="2"> NBB (Novo Basquete Brasil)
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao2" value="3"> Liga Sul-Americana
+        </label>
+        <br><br><br>
+        <button class="btn proximo" id="proximo3">proxima</button>
+    </div>
+
+    <div class="tela">
+        <h1>Quarta Pergunta</h1>
+        <h3>Quem é um dos jogadores mais emblemáticos da história do Sesi Franca Basquete, conhecido por sua habilidade
+            como armador?</h3><br><br>
+        <label>
+            <input type="radio" name="quetao3" value="0"> Leandrinho
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao3" value="1"> Huertas
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao3" value="2"> Helinho
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao3" value="3"> Nenê
+        </label>
+        <br><br><br>
+        <button class="btn proximo" id="proximo4">proxima</button>
+    </div>
+
+    <div class="tela">
+        <h1>Quinta e ultima Pergunta</h1>
+        <h3>Em quantas edições do NBB (Novo Basquete Brasil) o Sesi Franca Basquete chegou à final até 2023?</h3>
+        <br><br>
+        <label>
+            <input type="radio" name="quetao4" value="0"> 3
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao4" value="1"> 5
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao4" value="2"> 7
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="quetao4" value="3"> 10
+        </label>
+        <br><br><br>
+        <button class="btn proximo" id="proximo5">Fim</button>
+    </div>
+
+    <div class="tela">
+        <h1>Fim do Quiz</h1>
+        <div id="resultado">
+            <p>acertos:<span id="acertos">0</span></p>
+            <p>erros:<span id="erros">0</span></p>
+        </div>
+        <button class="btn restart">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- primieria pergunta: -->
