@@ -35,26 +35,25 @@ proximo5.addEventListener('click', () => {
     mudaAcerto()
 })
 
-
+const questao0 = document.querySelector(`input[name="questao0"]:checked`);
+const questao1 = document.querySelector(`input[name="questao1"]:checked`);
+const questao2 = document.querySelector(`input[name="questao2"]:checked`);
+const questao3 = document.querySelector(`input[name="questao3"]:checked`);
+const questao4 = document.querySelector(`input[name="questao4"]:checked`);
 function questao() {
-    const quetao0 = document.querySelector(`input[name="quetao0"]:checked`);
-    if (quetao0 && parseInt(quetao0.value) === 0) {
+    if (questao0 && parseInt(questao0.value) === 0) {
         score++;
     }
-    const quetao1 = document.querySelector(`input[name="quetao1"]:checked`);
-    if (quetao1 && parseInt(quetao1.value) === 2) {
+    if (questao1 && parseInt(questao1.value) === 2) {
         score++;
     }
-    const quetao2 = document.querySelector(`input[name="quetao2"]:checked`);
-    if (quetao2 && parseInt(quetao2.value) === 1) {
+    if (questao2 && parseInt(questao2.value) === 1) {
         score++;
     }
-    const quetao3 = document.querySelector(`input[name="quetao3"]:checked`);
-    if (quetao3 && parseInt(quetao3.value) === 2) {
+    if (questao3 && parseInt(questao3.value) === 2) {
         score++;
     }
-    const quetao4 = document.querySelector(`input[name="quetao4"]:checked`);
-    if (quetao4 && parseInt(quetao4.value) === 1) {
+    if (questao4 && parseInt(questao4.value) === 1) {
         score++;
     }
 }
