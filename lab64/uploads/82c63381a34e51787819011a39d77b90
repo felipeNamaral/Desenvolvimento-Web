@@ -1,0 +1,82 @@
+const startBtn = document.querySelector('#start');
+const telas = document.querySelectorAll(".tela");
+const timeEl = document.querySelector('#time');
+const jogo = document.querySelector('#jogo');
+const acertosEl = document.querySelector('#acertos')
+let time = 90;
+let jogando = true;
+let interval;
+let acertos = 0,
+    erros = 0
+precisão = '0%'
+
+
+startBtn.addEventListener("click", () => {
+    telas[0].classList.add("up");
+    startGame();
+})
+
+function startGame() {
+    jogando = true;
+    interval = setInterval(decreaseTime, 1000);
+    createRandomBola()
+}
+function decreaseTime() {
+    if (time === 0) {
+        //GAMEOVER
+    }
+    let current = --time;
+    let miliseconds = time * 1000;
+
+    let minutes = Math.floor(miliseconds / (1000 * 60));
+    let seconds = Math.floor((miliseconds % (1000 * 60)) / 1000);
+    //zero na direita
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    setTime('${minutes}:${seconds}')
+}
+
+function setTime() {
+    timeEl.innerHTML = time;
+}
+
+function createRandomBola() {
+    if (!jogando) {
+        //se esta jogando faz nada 
+        return;
+    }
+
+    const bola = document.createElement("div");
+    const size = getRandomNumber(30, 100);
+    const { width,height} = jogo.getBoundingClientRect();
+    const x = getRandomNumber(0, width - size);
+    const y = getRandomNumber(0, height - size);
+    bola.classList.add('bola');
+    bola.style.width = `${size}px`;
+    bola.style.height = `${size}px`;
+    bola.style.left = `${x}px`;
+    bola.style.top = `${y}px`;
+    jogo.append(bola);
+
+    bola.addEventListener("Animationend", () =>{
+       bola.remove() 
+       createRandomBola();
+    })
+}
+
+jogo.addEventListener('click', () =>{
+    if (e.target.classList.contains('bola')){
+        //acertos ++    
+        e.target.remove()  
+    }else{
+       //se nao clocar erros ++ 
+    }
+    acertosEl.innerHTML = acertos;
+})
+
+
+
+
+function getRandomNumber(min, max) {
+    return Math.random(Math.floor() * (max - min) + min)
+}

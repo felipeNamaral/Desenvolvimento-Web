@@ -7,7 +7,7 @@ const proximo = document.querySelector('#proximo'),
     proximo4 = document.querySelector('#proximo4'),
     proximo5 = document.querySelector('#proximo5');
 const restartBtns = document.querySelectorAll('.restart');
-const acertos = document.querySelector("#acertos");
+const scoreA = document.querySelector("#acertos");
 const errosA = document.querySelector("#erros");
 let score = 0,
     erros = 0;
@@ -32,14 +32,14 @@ proximo4.addEventListener('click', () => {
 proximo5.addEventListener('click', () => {
     telas[5].classList.add('up');
     questao();
-    mudaAcerto()
+    mudaAcerto();
 })
 
-const questao0 = document.querySelector(`input[name="questao0"]:checked`);
-const questao1 = document.querySelector(`input[name="questao1"]:checked`);
-const questao2 = document.querySelector(`input[name="questao2"]:checked`);
-const questao3 = document.querySelector(`input[name="questao3"]:checked`);
-const questao4 = document.querySelector(`input[name="questao4"]:checked`);
+const questao0 = document.querySelector(`input[name="quetao0"]:checked`);
+const questao1 = document.querySelector(`input[name="quetao1"]:checked`);
+const questao2 = document.querySelector(`input[name="quetao2"]:checked`);
+const questao3 = document.querySelector(`input[name="quetao3"]:checked`);
+const questao4 = document.querySelector(`input[name="quetao4"]:checked`);
 function questao() {
     if (questao0 && parseInt(questao0.value) === 0) {
         score++;
@@ -59,12 +59,12 @@ function questao() {
 }
 
 
-function mudaAcerto(){
-    acertos.innerHTML = score;
-    erros = 5 - score
+function mudaAcerto() {
+    scoreA.innerHTML = score;
+    erros = 5 - score;
     errosA.innerHTML = erros;
     errosA.style.color = 'red';
-    acertos.style.color = 'green';
+    scoreA.style.color = 'green';
 }
 
 
