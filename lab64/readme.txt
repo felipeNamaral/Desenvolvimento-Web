@@ -5,5 +5,6 @@ curl http://127.0.0.1:3000/
 curl http://127.0.0.1:3000/about
 
 3. Upload de arquivo: 
-http://127.0.0.1:3000/envio
+
+curl -X POST -F "file=@/Desenvolvimento-Web/lab64/arquivo.txt" http://127.0.0.1:3000/upload
 

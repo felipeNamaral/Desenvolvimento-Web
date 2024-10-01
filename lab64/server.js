@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
-const multer = require('multer');
 
 const app = express();
 const port = 3000;
@@ -23,11 +22,24 @@ app.get('/envio', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'envio.html'));
 });
 
-const upload = multer({dest:'uploads/'})
+app.post('/upload', (req, res) => {
+    if (req.method === 'POST' && req.url === '/upload') {
+        let fileData = '';
+        req.on('data', chunk => {
+            fileData += chunk.toString();
+        });
+        req.on('end', () => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+            res.end('Upload simulado com sucesso!');
+        });
+    } else {
+        res.statusCode = 404;
+        res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+        res.end('Rota não encontrada');
+    }
+});
 
-app.post('/upload',upload.single("file"),(req,res)=>{
-    res.send('<h1>Arquivo recebido</h1>')
-})
 
 app.use((req,res)=>{
     res.status(404).send("Página não encontrada <h1> Erro 404 </h1>")
