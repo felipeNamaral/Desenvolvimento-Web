@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    overflow-x: hidden;
+    
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contatenos{
+    position: relative;
+    max-width: 400px;
+    background-color: rgba(103, 119, 202, 0.5);
+    border: 2px solid rgb(2, 18, 53);
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+.inputbox input{
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1 rem;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+.inputbox ion-icon{
+    position: relative;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    top: 20px;
+}
+.forget{
+    margin: 35px 0;
+    font-size: 0.85rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2{
+    font-size: 2rem;
+    color:#ffffff ;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;   
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.textarea{
+    width: 300px;
+    height: 100px;
+    background-color: rgba(103, 119, 202, 0.5);
+    font-size: 1rem;
+    color: white;
+}
+input:focus ~ textarea,
+input:valid ~ textarea{
+    top: -5px;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-bottom: 40px;
+    border-radius: 20px;
+    background-color: rgba(255, 255,255,1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+button:hover{
+    background-color: rgba(255, 255,255,0.5);
+}
+
