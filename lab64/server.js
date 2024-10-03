@@ -18,10 +18,6 @@ app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 
-app.get('/envio', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'envio.html'));
-});
-
 app.post('/upload', (req, res) => {
     if (req.method === 'POST' && req.url === '/upload') {
         let fileData = '';
@@ -44,6 +40,7 @@ app.post('/upload', (req, res) => {
 app.use((req,res)=>{
     res.status(404).send("Página não encontrada <h1> Erro 404 </h1>")
 })
+
 // Inicia o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
